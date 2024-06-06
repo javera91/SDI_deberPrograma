@@ -1,0 +1,46 @@
+<h1>Profesores</h1>
+
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Nombres</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="firstName" placeholder="José Javier" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Apellidos</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="lastName" placeholder="Peña Ochoa" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Asignatura</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="role" placeholder="Inglés" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Departmento</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="department" placeholder="Idiomas" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>Fecha de contratación</nz-form-label>
+    <nz-form-control [nzSm]="16" [nzXs]="24">
+      <nz-date-picker formControlName="hireDate"></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Salario</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+<nz-input-number formControlName="salary" [nzMin]="0" [nzMax]="100000" [nzStep]="100"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+      <button nz-button nzType="primary">Enviar</button>
+    </nz-form-control>
+  </nz-form-item>
+
+</form>
